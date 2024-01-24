@@ -14,23 +14,38 @@ public class App {
         
         Money c = a.plus(b); 
 
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(c);
+        System.out.println(a); //10.00e
+        System.out.println(b); //5.00e
+        System.out.println(c); //15.00e
 
         a = a.plus(c); 
 
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(c);
+        System.out.println(a);//25.00e
+        System.out.println(b);//5.00e
+        System.out.println(c);//15.00e
 
         //LessThan
-        a = new Money(10, 0);
         b = new Money(3, 0);
         c = new Money(5, 0);
 
-        System.out.println(a.lessThan(b));  
-        System.out.println(b.lessThan(c));  
+        System.out.println(a.lessThan(b));//false  
+        System.out.println(b.lessThan(c));//true
+        
+        //Minus 
+        a = new Money(10, 0);
+        b = new Money(3, 50); 
+
+        c = a.minus(b); 
+
+        System.out.println(a);//10.00e
+        System.out.println(b);//3.50e
+        System.out.println(c);//6.50e
+
+        c = c.minus(a);
+
+        System.out.println(a);//10.00e
+        System.out.println(b);//3.50e
+        System.out.println(c);//0.00e
         
     }
 }
