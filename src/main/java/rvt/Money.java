@@ -73,7 +73,7 @@ public Money minus(Money decreaser) {
     int newCents = this.cents - decreaser.cents();
     Money newMoney = new Money(newEuros, newCents);
     
-    if (newCents < 0) {
+    if (newEuros < 0) {
         newEuros = newEuros - 1;
         newCents = newCents + 100; 
     }

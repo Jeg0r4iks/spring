@@ -1,4 +1,4 @@
-package rvt.DefaultController;
+package rvt;
 
 public class Hobby {
     private int id; 

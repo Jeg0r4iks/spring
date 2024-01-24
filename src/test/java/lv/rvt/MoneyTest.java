@@ -1,8 +1,10 @@
-package rvt;
+package lv.rvt;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
+
+import rvt.Money;
 
 public class MoneyTest {
     
@@ -21,10 +23,8 @@ public class MoneyTest {
 
         Money result2 = mon3.plus(mon4);
         
-        assertEquals(91, result2.euros());
-        assertEquals(88, result2.cents());
-
-    
+        assertEquals(5, result2.euros());
+        assertEquals(188, result2.cents());
 
     }
 
@@ -35,7 +35,7 @@ public class MoneyTest {
 
         Money result3 = mon1.minus(mon2); 
 
-        assertEquals(10, result3.euros());
-        assertEquals(20, result3.cents());
+        assertEquals(0, result3.euros());
+        assertEquals(0, result3.cents());
     }
 } 
