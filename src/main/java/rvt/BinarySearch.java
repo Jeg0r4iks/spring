@@ -1,19 +1,19 @@
 package rvt;
 
-import java.util.ArrayList;
-
 public class BinarySearch {
-    public static int binarySearch(ArrayList<Book> books, int searchedId) {
+    public static int binarySearch(int[] array, int searchedId) {
         int begin = 0; 
-        int end = books.size() - 1;
+        int end = array.length - 1;
 
-        while (begin > end) {
+        while (begin <= end) {
             int middle = (end + begin) / 2; 
 
-            if (middle == searchedId) {
+            if (array[middle] == searchedId) {
                 return middle;
-            } else if (middle < searchedId) {
+
+            } else if (array[middle] < searchedId) {
                 begin = middle + 1;
+                
             } else {
                 end = middle - 1;
             }
